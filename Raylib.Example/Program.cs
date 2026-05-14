@@ -9,10 +9,12 @@ public static class Program
     {
         Console.WriteLine("Initializing Window...");
 
-        fixed (byte* p = Encoding.UTF8.GetBytes("Raylib Example\0"))
-        {
-            Bindings.Raylib.InitWindow(800, 450, (sbyte*)p);
-        }
+        // fixed (byte* p = Encoding.UTF8.GetBytes("Raylib Example\0"))
+        // {
+        //     Bindings.Raylib.InitWindow(800, 450, (sbyte*)p);
+        // }
+
+        Bindings.Raylib.InitWindow(800, 450, "Raylib Example Safe");
 
         while (Bindings.Raylib.WindowShouldClose() == 0)
         {
