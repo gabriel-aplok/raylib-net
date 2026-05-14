@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <TargetFramework>net10.0</TargetFramework>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+
+        <!-- data -->
+        <GenerateDocumentationFile>false</GenerateDocumentationFile>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <GenerateDependencyFile>false</GenerateDependencyFile>
+
+        <!-- tweaks  -->
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <Deterministic>true</Deterministic>
+        <InvariantGlobalization>true</InvariantGlobalization>
+
+        <!-- code wuality -->
+        <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+
+        <!-- publishing -->
+        <SelfContained>true</SelfContained>
+        <PublishSingleFile>false</PublishSingleFile>
+        <PublishReadyToRun>true</PublishReadyToRun>
+        <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+        <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+
+        <PublishTrimmed>true</PublishTrimmed>
+        <TrimMode>link</TrimMode>
+
+        <TieredCompilation>true</TieredCompilation>
+        <TieredCompilationQuickJit>false</TieredCompilationQuickJit>
+        <TieredPGO>true</TieredPGO>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="$([MSBuild]::IsOSPlatform('Windows'))">
+        <UseMultiToolTask>true</UseMultiToolTask>
+        <EnforceProcessCountAcrossBuilds>true</EnforceProcessCountAcrossBuilds>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Content Include="runtimes\**\*">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        </Content>
+    </ItemGroup>
+</Project>

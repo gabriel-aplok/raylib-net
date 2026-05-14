@@ -1,0 +1,4 @@
+<Solution>
+    <Project Path="Raylib.Bindings/Raylib.Bindings.csproj" />
+    <Project Path="Raylib.Example/Raylib.Example.csproj" />
+</Solution>
