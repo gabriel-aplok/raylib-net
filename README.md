@@ -1,7 +1,24 @@
-# raylib dotnet bindings
+## raylib-net
 
-this project contains bindings for the [raylib](https://www.raylib.com/) library for C# and .NET 10.
+C# bindings for **raylib 6.0** targeting **.NET 10**.
 
-bindings are generated from the [raylib](https://www.raylib.com/) header files and are compatible with the [raylib](https://www.raylib.com/) library version 6.0.
+These bindings are automatically generated from the official raylib headers to ensure full compatibility with the latest release.
 
-IN DEVELOPMENT!!!!!!!!!!!!!
+> [!WARNING]
+> **Status:** Work in Progress. API is subject to change.
+
+### Features
+
+- **Version Parity:** Supports raylib 6.0.
+- **Modern .NET:** Built specifically for .NET 10.
+- **Minimalist:** Low-overhead, direct mappings.
+
+### Quick Start
+
+1. Clone the repository.
+2. Add the project reference to your solution.
+3. Ensure the raylib shared library is in your output directory.
+
+### License
+
+This project is licensed under the zlib/libpng license, mirroring raylib.
